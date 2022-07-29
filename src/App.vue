@@ -34,9 +34,7 @@ export default {
   },
   async created() {
     const response = await fetch("https://62e3dff33c89b95396d2a865.mockapi.io/users");
-    const data2 = await response.json();
-    console.log(data2)
-    this.list = data2;
+    this.list = await response.json();
   }
 }
 </script>
